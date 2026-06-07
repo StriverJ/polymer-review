@@ -32,59 +32,76 @@
       <p>这个网页用于复习《聚合物成型加工》课程体系和复习题。它把课程内容、题目答案、课件来源和收藏筛选整合在一个可浏览、可搜索、可展开预览的页面中。</p>
     </section>
 
-    <section class="help-grid">
-      <article class="help-card help-section" data-help-section>
-        <h2>0. 打开方式</h2>
-        <p>可以直接打开 <code>index.html</code> 使用网页。收藏会保存在当前浏览器本地，第一次点击收藏时会弹出风险提醒。</p>
-      </article>
+    <div class="help-doc-layout">
+      <aside class="help-toc" aria-label="使用说明目录">
+        <p class="eyebrow">目录</p>
+        <a href="#guide-map">浏览课程脉络</a>
+        <a href="#guide-toc">使用题库目录</a>
+        <a href="#guide-practice">做题模式</a>
+        <a href="#guide-favorite">收藏与筛选</a>
+        <a href="#guide-export">导出收藏</a>
+        <a href="#guide-search">搜索题目</a>
+        <a href="#guide-source">展开课件内容</a>
+        <a href="#guide-formula">公式与重点词</a>
+        <a href="#guide-recommend">推荐使用方式</a>
+        <a href="#guide-developer">开发者信息</a>
+      </aside>
 
-      <article class="help-card help-section" data-help-section>
-        <h2>1. 浏览课程脉络</h2>
-        <p>进入主网页后，顶部滑块可在“课程脉络”和“复习题库”之间切换。右侧滚动到不同区域时，顶部滑块会自动同步当前位置。</p>
-      </article>
+      <article class="help-doc">
+        <section id="guide-map" class="help-section" data-help-section>
+          <h2>浏览课程脉络</h2>
+          <p>进入主网页后，顶部滑块可在“课程脉络”和“复习题库”之间切换。右侧滚动到不同区域时，顶部滑块会自动同步当前位置。</p>
+        </section>
 
-      <article class="help-card help-section" data-help-section>
-        <h2>2. 使用题库目录</h2>
-        <p>左侧目录按“流变学”和“成型加工”分组。每道题都会显示题型，例如基本公式、判断题、综合题或推导题。右侧滚动到某道题时，左侧目录会自动高亮并跟随滚动。</p>
-      </article>
+        <section id="guide-toc" class="help-section" data-help-section>
+          <h2>使用题库目录</h2>
+          <p>左侧目录按“流变学”和“成型加工”分组。每道题都会显示题型，例如基本公式、判断题、综合题或推导题。右侧滚动到某道题时，左侧目录会自动高亮并跟随滚动。</p>
+        </section>
 
-      <article class="help-card help-section" data-help-section>
-        <h2>3. 收藏与筛选</h2>
-        <p>题目可在目录或题卡上点击星标收藏。收藏保存在浏览器 <code>localStorage</code> 中，刷新后不会丢失。清除浏览器缓存/站点数据、使用无痕模式、更换浏览器或电脑可能导致收藏丢失。顶部“全部题目/只看收藏”滑块可切换显示范围。</p>
-      </article>
+        <section id="guide-practice" class="help-section" data-help-section>
+          <h2>做题模式</h2>
+          <p>主网页顶部可以开启“做题模式”。开启后，题目分析和题目解答会默认隐藏，你可以先独立思考，再点击对应小节手动展开查看。</p>
+        </section>
 
-      <article class="help-card help-section" data-help-section>
-        <h2>4. 导出收藏</h2>
-        <p>主网页导航栏提供“导出收藏”按钮，可把当前收藏题号导出为 <code>聚合物成型加工-收藏题号.txt</code>。建议在复习前后定期导出备份。</p>
-      </article>
+        <section id="guide-favorite" class="help-section" data-help-section>
+          <h2>收藏与筛选</h2>
+          <p>题目可在目录或题卡上点击星标收藏。收藏保存在浏览器 <code>localStorage</code> 中，刷新后不会丢失。清除浏览器缓存/站点数据、使用无痕模式、更换浏览器或电脑可能导致收藏丢失。顶部“全部题目/只看收藏”滑块可切换显示范围。</p>
+        </section>
 
-      <article class="help-card help-section" data-help-section>
-        <h2>5. 搜索题目</h2>
-        <p>在主网页顶部输入关键词后，需要点击放大镜按钮或按回车才会执行搜索。搜索范围包括题目、答案、题型、周次和课件来源。</p>
-      </article>
+        <section id="guide-export" class="help-section" data-help-section>
+          <h2>导出收藏</h2>
+          <p>主网页导航栏提供“导出收藏”按钮，可把当前收藏题号导出为 <code>聚合物成型加工-收藏题号.txt</code>。建议在复习前后定期导出备份。</p>
+        </section>
 
-      <article class="help-card help-section" data-help-section>
-        <h2>6. 展开课件内容</h2>
-        <p>每道题的课件来源默认不渲染 PDF，以保证页面打开速度。点击来源卡片右上角的“&lt;”按钮后，下方会动画展开并加载对应 PDF 页。</p>
-      </article>
+        <section id="guide-search" class="help-section" data-help-section>
+          <h2>搜索题目</h2>
+          <p>在主网页顶部输入关键词后，需要点击放大镜按钮或按回车才会执行搜索。搜索范围包括题目、答案、题型、周次和课件来源。</p>
+        </section>
 
-      <article class="help-card help-section" data-help-section>
-        <h2>7. 公式与重点词</h2>
-        <p>题目中的公式使用 LaTeX 渲染。答案中的关键概念会用高亮标出，例如粘弹性、拉伸硬化、松弛时间、保压和内应力，便于快速抓重点。</p>
-      </article>
+        <section id="guide-source" class="help-section" data-help-section>
+          <h2>展开课件内容</h2>
+          <p>每道题的课件来源默认不渲染 PDF，以保证页面打开速度。点击来源卡片右上角的“&lt;”按钮后，下方会动画展开并加载对应 PDF 页。</p>
+        </section>
 
-      <article class="help-card help-section" data-help-section>
-        <h2>8. 网站搭建者信息</h2>
-        <p>创建者：<strong>北羽</strong></p>
-        <p>邮箱：<a href="mailto:jipy23@mails.tsinghua.edu.cn">jipy23@mails.tsinghua.edu.cn</a></p>
-        <p>本网页使用 <strong>ChatGPT</strong> 辅助生成。使用过程中如有任何疑问，请通过邮箱联系。</p>
-      </article>
-    </section>
+        <section id="guide-formula" class="help-section" data-help-section>
+          <h2>公式与重点词</h2>
+          <p>题目中的公式使用 LaTeX 渲染。答案中的关键概念会用高亮标出，例如粘弹性、拉伸硬化、松弛时间、保压和内应力，便于快速抓重点。</p>
+        </section>
 
-    <section class="help-section help-note" data-help-section>
-      <h2>推荐使用方式</h2>
-      <p>先浏览课程脉络，建立“材料-流变-加工-结构-性能”的主线；再进入题库，按左侧目录复习题型；最后用收藏筛选整理自己不熟悉的题目。</p>
-    </section>
+        <section id="guide-recommend" class="help-section" data-help-section>
+          <h2>推荐使用方式</h2>
+          <p>先浏览课程脉络，建立“材料-流变-加工-结构-性能”的主线；再进入题库，按左侧目录复习题型；最后用收藏筛选整理自己不熟悉的题目。</p>
+        </section>
+
+        <section id="guide-developer" class="help-section" data-help-section>
+          <h2>开发者信息</h2>
+          <p>开发者：<strong>北羽</strong></p>
+          <p>邮箱：<a href="mailto:jipy23@mails.tsinghua.edu.cn">jipy23@mails.tsinghua.edu.cn</a></p>
+          <p>GitHub：<a href="https://github.com/StriverJ" target="_blank" rel="noreferrer">https://github.com/StriverJ</a></p>
+          <p>本网页使用 <strong>ChatGPT</strong> 辅助生成。使用过程中如有任何疑问，请通过邮箱联系。</p>
+        </section>
+      </article>
+    </div>
 
     <div id="helpEmptyState" class="empty-state" hidden>没有匹配的使用说明内容。</div>
   </main>

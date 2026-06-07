@@ -7,6 +7,7 @@
   const contentPanel = document.querySelector('.content-panel');
   const searchInput = document.getElementById('searchInput');
   const searchButton = document.getElementById('searchButton');
+  const practiceModeToggle = document.getElementById('practiceModeToggle');
   const exportFavoritesButton = document.getElementById('exportFavoritesButton');
   const favoriteNoticeModal = document.getElementById('favoriteNoticeModal');
   const favoriteNoticeConfirm = document.getElementById('favoriteNoticeConfirm');
@@ -25,6 +26,7 @@
 
   let activeFilter = 'all';
   let committedSearch = '';
+  let practiceMode = false;
   let favorites = loadFavorites();
   let cardObserver;
   let sectionObserver;
@@ -158,6 +160,20 @@
     `).join('');
   }
 
+  function renderRevealBlock(title, content, kind) {
+    const hidden = practiceMode ? 'hidden' : '';
+    const expanded = practiceMode ? 'false' : 'true';
+    return `
+      <section class="section-block reveal-block ${practiceMode ? 'is-collapsed' : 'is-open'}" data-reveal-block="${kind}">
+        <button class="reveal-toggle" type="button" aria-expanded="${expanded}">
+          <span>${title}</span>
+          <span class="reveal-icon">&lt;</span>
+        </button>
+        <div class="reveal-content" ${hidden}>${content}</div>
+      </section>
+    `;
+  }
+
   function renderToc(items) {
     const parts = ['流变学', '成型加工'];
     tocEl.innerHTML = parts.map((part) => {
@@ -207,15 +223,9 @@
             <p>${highlight(item.question)}</p>
           </section>
 
-          <section class="section-block">
-            <h4>题目分析</h4>
-            <p>${highlight(item.analysis)}</p>
-          </section>
+          ${renderRevealBlock('题目分析', `<p>${highlight(item.analysis)}</p>`, 'analysis')}
 
-          <section class="section-block">
-            <h4>题目解答</h4>
-            <ul>${item.answer.map((line) => `<li>${highlight(line)}</li>`).join('')}</ul>
-          </section>
+          ${renderRevealBlock('题目解答', `<ul>${item.answer.map((line) => `<li>${highlight(line)}</li>`).join('')}</ul>`, 'answer')}
 
           <section class="section-block">
             <h4>答案内容来自的课件部分</h4>
@@ -399,11 +409,28 @@
       return;
     }
 
+    const revealButton = event.target.closest('.reveal-toggle');
+    if (revealButton) {
+      const block = revealButton.closest('.reveal-block');
+      const content = block.querySelector('.reveal-content');
+      const nextOpen = revealButton.getAttribute('aria-expanded') !== 'true';
+      revealButton.setAttribute('aria-expanded', String(nextOpen));
+      block.classList.toggle('is-open', nextOpen);
+      block.classList.toggle('is-collapsed', !nextOpen);
+      content.hidden = !nextOpen;
+      return;
+    }
+
     const button = event.target.closest('[data-fav]');
     if (!button) return;
     event.preventDefault();
     event.stopPropagation();
     toggleFavorite(button.dataset.fav);
+  });
+
+  practiceModeToggle.addEventListener('change', () => {
+    practiceMode = practiceModeToggle.checked;
+    render();
   });
 
   function init() {
