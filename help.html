@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>使用说明 | 聚合物成型加工复习网页</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%232557d6'/%3E%3Cstop offset='1' stop-color='%230f9f83'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Cpath d='M18 41c9-20 19 20 28 0' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='19' cy='24' r='5' fill='white'/%3E%3Ccircle cx='45' cy='24' r='5' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="help-body">
+  <header class="topbar help-topbar">
+    <a class="brand" href="index.html#top" aria-label="返回主网页">
+      <span class="brand-mark">P</span>
+      <span>聚合物成型加工复习</span>
+    </a>
+    <div class="toolbar help-toolbar">
+      <a class="plain-nav active" href="help.html">使用说明</a>
+      <a class="plain-nav" href="index.html#top">返回主网页</a>
+      <div class="search-wrap help-search-wrap">
+        <input id="helpSearchInput" class="search" type="search" placeholder="搜索使用说明" aria-label="搜索使用说明">
+        <button id="helpSearchButton" class="search-button" type="button" aria-label="搜索使用说明">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.7 18.2a7.5 7.5 0 1 1 5.3-2.2l4.1 4.1-1.8 1.8-4.1-4.1a7.4 7.4 0 0 1-3.5.9Zm0-2.5a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="help-shell">
+    <section class="help-hero help-section" data-help-section>
+      <p class="eyebrow">User Guide</p>
+      <h1>网页使用说明</h1>
+      <p>这个网页用于复习《聚合物成型加工》课程体系和复习题。它把课程内容、题目答案、课件来源和收藏筛选整合在一个可浏览、可搜索、可展开预览的页面中。</p>
+    </section>
+
+    <section class="help-grid">
+      <article class="help-card help-section" data-help-section>
+        <h2>0. 打开方式</h2>
+        <p>可以直接打开 <code>index.html</code> 使用网页。收藏会保存在当前浏览器本地，第一次点击收藏时会弹出风险提醒。</p>
+      </article>
+
+      <article class="help-card help-section" data-help-section>
+        <h2>1. 浏览课程脉络</h2>
+        <p>进入主网页后，顶部滑块可在“课程脉络”和“复习题库”之间切换。右侧滚动到不同区域时，顶部滑块会自动同步当前位置。</p>
+      </article>
+
+      <article class="help-card help-section" data-help-section>
+        <h2>2. 使用题库目录</h2>
+        <p>左侧目录按“流变学”和“成型加工”分组。每道题都会显示题型，例如基本公式、判断题、综合题或推导题。右侧滚动到某道题时，左侧目录会自动高亮并跟随滚动。</p>
+      </article>
+
+      <article class="help-card help-section" data-help-section>
+        <h2>3. 收藏与筛选</h2>
+        <p>题目可在目录或题卡上点击星标收藏。收藏保存在浏览器 <code>localStorage</code> 中，刷新后不会丢失。清除浏览器缓存/站点数据、使用无痕模式、更换浏览器或电脑可能导致收藏丢失。顶部“全部题目/只看收藏”滑块可切换显示范围。</p>
+      </article>
+
+      <article class="help-card help-section" data-help-section>
+        <h2>4. 导出收藏</h2>
+        <p>主网页导航栏提供“导出收藏”按钮，可把当前收藏题号导出为 <code>聚合物成型加工-收藏题号.txt</code>。建议在复习前后定期导出备份。</p>
+      </article>
+
+      <article class="help-card help-section" data-help-section>
+        <h2>5. 搜索题目</h2>
+        <p>在主网页顶部输入关键词后，需要点击放大镜按钮或按回车才会执行搜索。搜索范围包括题目、答案、题型、周次和课件来源。</p>
+      </article>
+
+      <article class="help-card help-section" data-help-section>
+        <h2>6. 展开课件内容</h2>
+        <p>每道题的课件来源默认不渲染 PDF，以保证页面打开速度。点击来源卡片右上角的“&lt;”按钮后，下方会动画展开并加载对应 PDF 页。</p>
+      </article>
+
+      <article class="help-card help-section" data-help-section>
+        <h2>7. 公式与重点词</h2>
+        <p>题目中的公式使用 LaTeX 渲染。答案中的关键概念会用高亮标出，例如粘弹性、拉伸硬化、松弛时间、保压和内应力，便于快速抓重点。</p>
+      </article>
+
+      <article class="help-card help-section" data-help-section>
+        <h2>8. 网站搭建者信息</h2>
+        <p>创建者：<strong>北羽</strong></p>
+        <p>邮箱：<a href="mailto:jipy23@mails.tsinghua.edu.cn">jipy23@mails.tsinghua.edu.cn</a></p>
+        <p>本网页使用 <strong>ChatGPT</strong> 辅助生成。使用过程中如有任何疑问，请通过邮箱联系。</p>
+      </article>
+    </section>
+
+    <section class="help-section help-note" data-help-section>
+      <h2>推荐使用方式</h2>
+      <p>先浏览课程脉络，建立“材料-流变-加工-结构-性能”的主线；再进入题库，按左侧目录复习题型；最后用收藏筛选整理自己不熟悉的题目。</p>
+    </section>
+
+    <div id="helpEmptyState" class="empty-state" hidden>没有匹配的使用说明内容。</div>
+  </main>
+
+  <script src="js/help.js"></script>
+</body>
+</html>

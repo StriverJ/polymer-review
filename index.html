@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>聚合物成型加工复习题解答</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%232557d6'/%3E%3Cstop offset='1' stop-color='%230f9f83'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Cpath d='M18 41c9-20 19 20 28 0' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='19' cy='24' r='5' fill='white'/%3E%3Ccircle cx='45' cy='24' r='5' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="返回顶部">
+      <span class="brand-mark">P</span>
+      <span>聚合物成型加工复习</span>
+    </a>
+    <div class="toolbar">
+      <div class="segmented section-segment" data-active="course">
+        <span class="seg-thumb" aria-hidden="true"></span>
+        <a class="seg-option active" data-section-link="course" href="#courseMap">课程脉络</a>
+        <a class="seg-option" data-section-link="questions" href="#questionBank">复习题库</a>
+      </div>
+      <div class="segmented filter-segment" data-active="all">
+        <span class="seg-thumb" aria-hidden="true"></span>
+        <button class="seg-option active" data-filter="all" type="button">全部题目</button>
+        <button class="seg-option" data-filter="favorites" type="button">只看收藏</button>
+      </div>
+      <div class="search-wrap">
+        <input id="searchInput" class="search" type="search" placeholder="输入后点击搜索" aria-label="搜索题目">
+        <button id="searchButton" class="search-button" type="button" aria-label="执行搜索">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.7 18.2a7.5 7.5 0 1 1 5.3-2.2l4.1 4.1-1.8 1.8-4.1-4.1a7.4 7.4 0 0 1-3.5.9Zm0-2.5a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg>
+        </button>
+      </div>
+      <button id="exportFavoritesButton" class="plain-nav plain-button" type="button">导出收藏</button>
+      <a class="plain-nav" href="help.html">使用说明</a>
+    </div>
+  </header>
+
+  <main id="top" class="shell">
+    <aside class="toc-panel" aria-label="题目目录">
+      <div class="toc-head">
+        <p class="eyebrow">目录</p>
+        <h1>复习题索引</h1>
+        <p id="resultCount" class="count"></p>
+      </div>
+      <nav id="tocList" class="toc-list"></nav>
+    </aside>
+
+    <section class="content-panel">
+      <section class="hero">
+        <p class="eyebrow">基于第 1-9 周课件整理</p>
+        <h2>《聚合物成型加工复习题》内容解答</h2>
+        <p>每张卡片包含原题、题目分析、题目解答和课件来源。PDF 课件会嵌入对应页预览；PPTX 课件提供文件链接和幻灯片号。</p>
+      </section>
+      <section id="courseMap" class="course-map" aria-label="课程体系脉络"></section>
+      <section id="questionBank" class="question-bank-head">
+        <p class="eyebrow">Question Bank</p>
+        <h2>复习题卡片</h2>
+      </section>
+      <div id="cards" class="cards"></div>
+      <div id="emptyState" class="empty-state" hidden>没有匹配的题目。</div>
+    </section>
+  </main>
+
+  <div id="favoriteNoticeModal" class="modal-backdrop" hidden>
+    <section class="notice-modal" role="dialog" aria-modal="true" aria-labelledby="favoriteNoticeTitle">
+      <p class="eyebrow">Favorite Notice</p>
+      <h2 id="favoriteNoticeTitle">收藏保存提醒</h2>
+      <p>收藏将保存在当前浏览器本地。</p>
+      <div class="warning-text">
+        以下操作可能导致收藏丢失：清除浏览器缓存/站点数据、使用无痕模式、更换浏览器或电脑、移动网页到不同访问地址、浏览器重装或数据同步异常。
+      </div>
+      <p>建议需要备份时点击导航栏的“导出收藏”。</p>
+      <div class="modal-actions">
+        <button id="favoriteNoticeConfirm" class="modal-primary" type="button">我知道了，继续收藏</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/course-map.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
